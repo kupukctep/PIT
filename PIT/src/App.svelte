@@ -14,7 +14,6 @@
                         <Intro/>
                         <Balance/>
                         <Trade/>
-                        <TransactionLog/>
                     </div>
                 </div>
             </div>

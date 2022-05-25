@@ -1,9 +1,5 @@
 <script lang="ts">
     import { transactionStore } from '../store.js';
-    //
-    // let assets = [{ticker: 'APPL', quantity: 100, value : 21000},
-    //     {ticker: 'LYFT', quantity: 23, value: 15000},
-    //     {ticker: 'WEN', quantity: 100, value: 50000}]
 </script >
 
 <table class="min-w-full divide-y divide-gray-200">

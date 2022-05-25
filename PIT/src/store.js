@@ -1,8 +1,7 @@
 import { writable } from 'svelte/store';
+import { PURCHASE } from './transactions';
 
 const TRANSACTIONS_KEY = "TRANSACTIONS";
-const PURCHASE = "PURCHASE";
-
 
 function createTransactionStore() {
     let initialTransactionList = JSON.parse(localStorage.getItem(TRANSACTIONS_KEY)) || [];

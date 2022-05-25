@@ -3,6 +3,7 @@
     import Intro from "./component/Intro.svelte";
 	import Trade from "./component/Trade.svelte";
 	import TransactionLog from "./component/TransactionLog.svelte";
+	import NetAssetValue from "./component/NetAssetValue.svelte";
 
 	export let name;
 </script>
@@ -12,6 +13,7 @@
 	<Balance/>
 	<Trade/>
 	<TransactionLog/>
+	<NetAssetValue/>
 </main>
 
 <style>

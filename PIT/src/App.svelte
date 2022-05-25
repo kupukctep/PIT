@@ -16,6 +16,7 @@
                     <div class="px-4 sm:px-6">
                         <Intro/>
                         <Balance/>
+                        <NetAssetValue/>
                         <Trade/>
                     </div>
                 </div>
@@ -23,7 +24,6 @@
         </div>
     </div>
     </section>
-	<NetAssetValue/>
 </main>
 
 <style lang="postcss" global>

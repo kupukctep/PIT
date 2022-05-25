@@ -2,11 +2,9 @@
     import Modal from "./Modal.svelte";
     import Operations from "./Assets.svelte";
     import Trade from "./Trade.svelte";
-    import { transactionStore } from '../store.js';
-    import NetAssetValue from "./NetAssetValue.svelte";
+    import {transactionStore} from '../store.js';
 
-
-    let depositAmount
+    let depositAmount = 1200.50
     let showDepositModal = false
     let showOptionModal = false
 
@@ -29,7 +27,7 @@
 </script>
 
 <div>
-    <p class="text-xl">Available: <NetAssetValue/></p>
+    <p class="text-xl">Available: {depositAmount}</p>
     <div>
         <button value="Deposit" type="button" on:click={deposit}>Deposit</button>
         <button value="Withdraw" type="button" on:click={withdraw}>Withdraw</button>

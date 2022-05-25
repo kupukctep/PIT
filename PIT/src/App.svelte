@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Balance from "./component/Balance.svelte";
-
+	import Intro from "./component/Intro.svelte";
 </script>
 
-<main>
+<main class="bg-amber-200">
 	<Balance/>
+	<Intro />
 </main>
 
 <style>

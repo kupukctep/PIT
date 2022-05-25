@@ -1,6 +1,6 @@
 <script lang="ts">
     import Modal from "./Modal.svelte";
-    import Operations from "./Operations.svelte";
+    import Operations from "./Assets.svelte";
 
     let total = 1201.50
     let showDepositModal = false

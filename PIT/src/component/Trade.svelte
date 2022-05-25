@@ -1,7 +1,9 @@
 <script lang="ts">
     import { transactionStore } from '../store.js';
+    import Modal from "./Modal.svelte";
 
     let purchase = emptyPurchase();
+    export let showOptionModal = false
 
     function emptyPurchase() {
         return {
@@ -18,12 +20,16 @@
     }
 </script>
 
-<div>
-    <form>
-        <label>Ticker: <input type="text" bind:value={purchase.ticker}></label>
-        <label>Amount: <input type="number" bind:value={purchase.amount}></label>
-        <label>Price: <input type="number" bind:value={purchase.price}></label>
-        <label>Fee: <input type="number"bind:value={purchase.fee}></label>
-    </form>
-    <button value="buy" type="button" on:click={buy}>Buy</button>
-</div>
+<Modal bind:show={showOptionModal} actionText="Buy" on:action={buy}>
+    <div slot="header">
+        Add a new option
+    </div>
+    <div>
+        <form>
+            <label>Ticker: <input type="text" bind:value={purchase.ticker}></label>
+            <label>Amount: <input type="number" bind:value={purchase.amount}></label>
+            <label>Price: <input type="number" bind:value={purchase.price}></label>
+            <label>Fee: <input type="number"bind:value={purchase.fee}></label>
+        </form>
+    </div>
+</Modal>

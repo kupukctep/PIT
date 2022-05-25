@@ -1,7 +1,9 @@
 <script lang="ts">
-    let assets = [{ticker: 'APPL', quantity: 100, value : 21000},
-        {ticker: 'LYFT', quantity: 23, value: 15000},
-        {ticker: 'WEN', quantity: 100, value: 50000}]
+    import { transactionStore } from '../store.js';
+    //
+    // let assets = [{ticker: 'APPL', quantity: 100, value : 21000},
+    //     {ticker: 'LYFT', quantity: 23, value: 15000},
+    //     {ticker: 'WEN', quantity: 100, value: 50000}]
 </script >
 
 <table class="min-w-full divide-y divide-gray-200">
@@ -23,11 +25,11 @@
     </tr>
     </thead>
     <tbody class="bg-white divide-y divide-gray-200">
-    {#each assets as asset}
+    {#each $transactionStore as transaction}
         <tr>
-            <td class="px-6 py-2">{asset.ticker}</td>
-            <td class="px-6 py-2">{asset.quantity}</td>
-            <td class="px-6 py-2 text-right">{asset.value}</td>
+            <td class="px-6 py-2">{transaction.payload.ticker}</td>
+            <td class="px-6 py-2">{transaction.payload.amount}</td>
+            <td class="px-6 py-2 text-right">{transaction.payload.price}</td>
         </tr>
     {/each}
     </tbody>

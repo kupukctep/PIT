@@ -10,8 +10,7 @@
 <main class="bg-amber-200">
 	<Intro />
 	<Balance/>
-	<Trade/>
-	<TransactionLog/>
+<!--	<TransactionLog/>-->
 </main>
 
 <style lang="postcss" global>

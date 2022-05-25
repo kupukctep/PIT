@@ -1,5 +1,10 @@
 <script lang="ts">
     import { transactionStore } from '../store.js';
+    import { PURCHASE } from '../transactions.js';
+
+    let purchases = [];
+
+    transactionStore.subscribe(transactionStore => purchases = transactionStore.filter(transaction => transaction.type === PURCHASE));
 </script >
 
 <table class="min-w-full divide-y divide-gray-200">
@@ -21,7 +26,8 @@
     </tr>
     </thead>
     <tbody class="bg-white divide-y divide-gray-200">
-    {#each $transactionStore as transaction}
+    {#each purchases as transaction}
+
         <tr>
             <td class="px-6 py-2">{transaction.payload.ticker}</td>
             <td class="px-6 py-2">{transaction.payload.amount}</td>

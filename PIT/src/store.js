@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { PURCHASE } from './transactions';
+import {DEPOSIT, PURCHASE} from './transactions';
 
 const TRANSACTIONS_KEY = "TRANSACTIONS";
 
@@ -14,6 +14,17 @@ function createTransactionStore() {
                 let transaction = {
                     type: PURCHASE,
                     payload: purchase,
+                }
+                transactionList.push(transaction);
+                localStorage.setItem(TRANSACTIONS_KEY, JSON.stringify(transactionList));
+                return transactionList;
+            })
+        },
+        addDeposit: (deposit) => {
+            return update(transactionList => {
+                let transaction = {
+                    type: DEPOSIT,
+                    payload: deposit,
                 }
                 transactionList.push(transaction);
                 localStorage.setItem(TRANSACTIONS_KEY, JSON.stringify(transactionList));

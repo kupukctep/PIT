@@ -1,21 +1,27 @@
 import { writable } from 'svelte/store';
 
-const PURCHASES_KEY = "PURCHASES";
+const TRANSACTIONS_KEY = "TRANSACTIONS";
+const PURCHASE = "PURCHASE";
 
-function createPurchaseStore() {
-    let initialPurchaseList = JSON.parse(localStorage.getItem(PURCHASES_KEY)) || [];
-    const { subscribe, set, update } = writable(initialPurchaseList);
+
+function createTransactionStore() {
+    let initialTransactionList = JSON.parse(localStorage.getItem(TRANSACTIONS_KEY)) || [];
+    const { subscribe, set, update } = writable(initialTransactionList);
 
     return {
         subscribe,
         addPurchase: (purchase) => {
-            return update(purchaseList => {
-                purchaseList.push(purchase);
-                localStorage.setItem(PURCHASES_KEY, JSON.stringify(purchaseList));
-                return purchaseList;
+            return update(transactionList => {
+                let transaction = {
+                    type: PURCHASE,
+                    payload: purchase,
+                }
+                transactionList.push(transaction);
+                localStorage.setItem(TRANSACTIONS_KEY, JSON.stringify(transactionList));
+                return transactionList;
             })
         }
     };
 }
 
-export const purchaseStore = createPurchaseStore();
+export const transactionStore = createTransactionStore();

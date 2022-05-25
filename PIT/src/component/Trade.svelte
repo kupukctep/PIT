@@ -1,5 +1,6 @@
 <script lang="ts">
     import { transactionStore } from '../store.js';
+    import Button from "./Button.svelte";
 
     let purchase = emptyPurchase();
 
@@ -25,5 +26,6 @@
         <label>Price: <input type="number" bind:value={purchase.price}></label>
         <label>Fee: <input type="number"bind:value={purchase.fee}></label>
     </form>
-    <button value="buy" type="button" on:click={buy}>Buy</button>
+
+    <Button class="btn-primary" on:click={buy}>Buy</Button>
 </div>

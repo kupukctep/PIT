@@ -1,6 +1,7 @@
 <script lang="ts">
     import Modal from "./Modal.svelte";
     import Operations from "./Assets.svelte";
+    import Button from "./Button.svelte";
 
     let total = 1201.50
     let depositAmount
@@ -18,8 +19,8 @@
 
 <div>
     <p class="text-xl">Available: {total.toFixed(2)}</p>
-    <button value="Deposit" type="button" on:click={deposit}>Deposit</button>
-    <button value="Withdraw" type="button" on:click={withdraw}>Withdraw</button>
+    <Button class="btn-success" on:click={deposit}>Deposit</Button>
+    <Button class="btn-danger" on:click={withdraw}>Withdraw</Button>
     <Operations/>
 </div>
 

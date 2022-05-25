@@ -19,5 +19,9 @@
                 <span>Simplifies TAX reporting</span>
             </div>
         </div>
+        <div class="text-center flex items-center flex-col ml-auto">
+            <img src="pit-logo.svg" height="96" width="96" alt="PIT logo" />
+            <span class="text-xs font-bold">Personal Investments Tracker</span>
+        </div>
     </div>
 </div>

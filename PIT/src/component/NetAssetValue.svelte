@@ -25,7 +25,7 @@
     }
 </script>
 
-<div>
-    <div class="text-sm text-gray-500" title="Net Asset Value">NAV</div>
+<div class="mt-4">
+    <div class="text-sm text-gray-500">Net Asset Value</div>
     <div class="text-xl font-bold">{netAssetValue}€</div>
 </div>

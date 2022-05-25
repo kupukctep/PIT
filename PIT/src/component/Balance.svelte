@@ -28,14 +28,24 @@
 </script>
 
 <div>
-    <p class="text-xl">Available: {depositAmount}</p>
-    <div>
-        <Button class="btn-success" on:click={deposit}>Deposit</Button>
-        <Button class="btn-danger" on:click={withdraw}>Withdraw</Button>
+    <div class="flex justify-between mb-5">
+        <div>
+            <div class="text-sm text-gray-500">Available</div>
+            <div class="text-xl font-bold">{depositAmount}€</div>
+        </div>
+        <div>
+            <img src="pit-logo.svg" height="48" width="48" alt="PIT logo" />
+        </div>
     </div>
-    <div>
-        <Button class="btn-success" on:click={sell}>Sell</Button>
-        <Button class="btn-danger" on:click={buy}>Buy</Button>
+    <div class="space-y-2">
+        <div class="grid-cols-2">
+            <Button class="btn-success w-100" on:click={deposit}>Deposit</Button>
+            <Button class="btn-danger w-100" on:click={withdraw}>Withdraw</Button>
+        </div>
+        <div>
+            <Button class="btn-primary" on:click={sell}>Sell</Button>
+            <Button class="btn-primary" on:click={buy}>Buy</Button>
+        </div>
     </div>
     <Operations/>
 </div>

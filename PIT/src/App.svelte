@@ -4,7 +4,6 @@
 	import Trade from "./component/Trade.svelte";
 	import TransactionLog from "./component/TransactionLog.svelte";
     import NetAssetValue from "./component/NetAssetValue.svelte";
-
 </script>
 
 <main class="min-h-screen bg-gray-100">
@@ -13,7 +12,7 @@
         <div class="relative z-20 w-full">
             <div class="w-full mx-auto py-6 sm:px-0 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-3xl">
-                    <div class="px-4 sm:px-6">
+                    <div>
                         <Intro/>
                         <Balance/>
                         <NetAssetValue/>

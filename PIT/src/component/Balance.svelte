@@ -28,7 +28,7 @@
 </script>
 
 <div>
-    <p class="text-xl">Available: {total.toFixed(2)}</p>
+    <p class="text-xl font-bold my-3">Available: {total.toFixed(2)}</p>
     <div>
         <Button class="btn-success" on:click={deposit}>Deposit</Button>
     <Button class="btn-danger" on:click={withdraw}>Withdraw</Button>

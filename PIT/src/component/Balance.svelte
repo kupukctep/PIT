@@ -52,5 +52,5 @@
 </Modal>
 
 <div>
-    <Trade showOptionModal="{showOptionModal}"/>
+    <Trade bind:showOptionModal="{showOptionModal}"/>
 </div>

@@ -1,7 +1,10 @@
 <script lang="ts">
     import Balance from "./component/Balance.svelte";
     import Intro from "./component/Intro.svelte";
-    import Trade from "./component/Trade.svelte";
+	import Trade from "./component/Trade.svelte";
+	import TransactionLog from "./component/TransactionLog.svelte";
+    import NetAssetValue from "./component/NetAssetValue.svelte";
+
 </script>
 
 <main class="min-h-screen bg-gray-100">
@@ -20,6 +23,7 @@
         </div>
     </div>
     </section>
+	<NetAssetValue/>
 </main>
 
 <style lang="postcss" global>

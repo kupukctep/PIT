@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { purchaseStore } from '../store.js';
+    import { transactionStore } from '../store.js';
 
     let purchase = emptyPurchase();
 
@@ -13,7 +13,7 @@
     }
 
     function buy() {
-        purchaseStore.addPurchase(purchase);
+        transactionStore.addPurchase(purchase);
         purchase = emptyPurchase();
     }
 </script>
@@ -26,8 +26,4 @@
         <label>Fee: <input type="number"bind:value={purchase.fee}></label>
     </form>
     <button value="buy" type="button" on:click={buy}>Buy</button>
-
-    {#each $purchaseStore as purchase}
-    	<div>{JSON.stringify(purchase)}</div>
-    {/each}
 </div>

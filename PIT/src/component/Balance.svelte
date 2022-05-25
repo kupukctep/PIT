@@ -1,5 +1,6 @@
 <script lang="ts">
     import Modal from "./Modal.svelte";
+    import Operations from "./Operations.svelte";
 
     let total = 1201.50
     let showDepositModal = false
@@ -8,7 +9,7 @@
         showDepositModal = true
     }
     function withdraw() {
-        total--
+        showDepositModal = true
     }
 </script>
 
@@ -16,6 +17,7 @@
     <p>Total: {total}</p>
     <button value="Deposit" type="button" on:click={deposit}>Deposit</button>
     <button value="Withdraw" type="button" on:click={withdraw}>Withdraw</button>
+    <Operations/>
 </div>
 
 <Modal bind:show={showDepositModal} actionText="Continue">

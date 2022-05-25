@@ -4,8 +4,8 @@
 </script>
 
 <main class="bg-amber-200">
-	<Balance/>
 	<Intro />
+	<Balance/>
 </main>
 
 <style>

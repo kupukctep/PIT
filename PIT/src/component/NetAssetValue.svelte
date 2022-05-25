@@ -26,5 +26,6 @@
 </script>
 
 <div>
-    NAV: { netAssetValue }
+    <div class="text-sm text-gray-500">Net Asset Value</div>
+    <div class="text-xl font-bold">{netAssetValue}€</div>
 </div>

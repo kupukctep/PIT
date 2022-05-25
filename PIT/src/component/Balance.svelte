@@ -37,12 +37,12 @@
             <img src="pit-logo.svg" height="48" width="48" alt="PIT logo" />
         </div>
     </div>
-    <div class="space-y-2">
-        <div class="grid-cols-2">
-            <Button class="btn-success w-100" on:click={deposit}>Deposit</Button>
+    <div class="space-y-2 mb-3">
+        <div class="grid grid-cols-2 gap-3">
+            <Button class="btn-success" on:click={deposit}>Deposit</Button>
             <Button class="btn-danger w-100" on:click={withdraw}>Withdraw</Button>
         </div>
-        <div>
+        <div class="grid grid-cols-2 gap-3">
             <Button class="btn-primary" on:click={sell}>Sell</Button>
             <Button class="btn-primary" on:click={buy}>Buy</Button>
         </div>

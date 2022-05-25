@@ -1,6 +1,6 @@
 <script lang="ts">
     import { transactionStore } from '../store.js';
-    import { PURCHASE } from '../transactions.js';
+    import { PURCHASE, DEPOSIT } from '../transactions.js';
 
     let netAssetValue = calc($transactionStore);
 
@@ -12,8 +12,11 @@
                 if (transaction.type === PURCHASE) {
                     value -= transaction.payload.price * transaction.payload.amount;
                 }
+                if (transaction.type === DEPOSIT) {
+                    value += transaction.payload.amount;
+                }
             });
-    return value;
+    return value.toFixed(2);
     }
 
     function buy() {

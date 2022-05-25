@@ -5,7 +5,7 @@
     import TransactionLog from "./component/TransactionLog.svelte";
 </script>
 
-<main class="bg-amber-200">
+<main>
     <section class="relative flex items-center justify-between flex-col h-screen lg:overflow-hidden">
         <div class="relative z-20 w-full">
             <div class="w-full md:w-3/4 mx-auto py-6 sm:px-0 lg:px-8">

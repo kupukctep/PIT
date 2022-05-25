@@ -1,11 +1,13 @@
 <script lang="ts">
 	import Balance from "./component/Balance.svelte";
+	import Trade from "./component/Trade.svelte";
 
 	export let name;
 </script>
 
 <main>
 	<Balance/>
+	<Trade/>
 </main>
 
 <style>

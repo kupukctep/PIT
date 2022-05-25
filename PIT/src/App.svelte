@@ -3,30 +3,30 @@
     import Intro from "./component/Intro.svelte";
 	import Trade from "./component/Trade.svelte";
 	import TransactionLog from "./component/TransactionLog.svelte";
-	import NetAssetValue from "./component/NetAssetValue.svelte";
+    import NetAssetValue from "./component/NetAssetValue.svelte";
 
 	export let name;
 </script>
 
-<main class="bg-amber-200">
-	<Intro />
-	<Balance/>
-	<Trade/>
-	<TransactionLog/>
+<main>
+    <section class="relative flex items-center justify-between flex-col h-screen lg:overflow-hidden">
+        <div class="relative z-20 w-full">
+            <div class="w-full md:w-3/4 mx-auto py-6 sm:px-0 lg:px-8">
+                <div class="sm:mx-auto sm:w-full sm:max-w-3xl">
+                    <div class="px-4 sm:px-6">
+                        <Intro/>
+                        <Balance/>
+                        <Trade/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 	<NetAssetValue/>
 </main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+<style lang="postcss" global>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 </style>
